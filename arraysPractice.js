@@ -153,7 +153,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   myGroceryList then return the new, updated grocery list.
 */
 
-  //Code Here
+function removeItem(list, itemRemove) {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === itemRemove) {
+      myGroceryList.splice(i,1);
+      return myGroceryList;
+    }
+    else{
+      return myGroceryList;
+    }
+  }
+}
+
+function addItem(myGroceryList, itemAdd) {
+  myGroceryList.pop(itemAdd);
+  return myGroceryList;
+}
+
+removeItem(myGroceryList, 'chips');
+console.log(myGroceryList);
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -246,12 +264,61 @@ var colt = {
 array with those four objects. After that console.log the length of the Array and make
 sure that it's equal to 4. */
 
-  //Code Here
+var devMountainEmployees = [];
+
+var tyler = {
+    name: 'Tyler',
+    position: 'Lead Instructor/Engineer',
+    spiritAnimal: 'Honey Badger'
+};
+
+
+var cahlan = {
+    name: 'Cahlan',
+    position: 'CEO',
+    spiritAnimal: 'butterfly'
+};
+
+var ryan = {
+    name: 'Ryan',
+    position: 'Marketing',
+    spiritAnimal: 'fox'
+};
+
+var colt = {
+    name: 'Colt',
+    position: 'Everything really',
+    spiritAnimal: 'Young Male Horse'
+};
+
+function addEmployees(employeeList) {
+  devMountainEmployees.push(employeeList);
+  return devMountainEmployees;
+}
+
+
+addEmployees(tyler);
+addEmployees(cahlan);
+addEmployees(ryan);
+addEmployees(colt);
+
+console.log(devMountainEmployees.length);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
-  //Code Here
+function indexOfCahlan() {
+  for(var i = 0; i < devMountainEmployees.length; i++) {
+    if(devMountainEmployees[i].name === "Cahlan") {
+      devMountainEmployees.splice(i, 1);
+    }
+  }
+  return devMountainEmployees;
+}
+
+
+indexOfCahlan();
+
 
 
 
